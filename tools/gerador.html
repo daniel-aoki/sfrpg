@@ -91,7 +91,7 @@
             </tr>
             <tr>
                 <td align="center" colspan="2">
-                    <img alt="F�sicos" src="sheet-img/sfphysical.jpg" />
+                    <img alt="Físicos" src="sheet-img/sfphysical.jpg" />
                 </td>
                 <td align="center" colspan="2">
                     <img alt="Sociais" src="sheet-img/sfsocial.jpg" />
@@ -253,7 +253,7 @@
                     <img alt="Talentos" src="sheet-img/sftalents.jpg" />
                 </td>
                 <td align="center" colspan="2">
-                    <img alt="Per�cias" src="sheet-img/sfskills.jpg" />
+                    <img alt="Perícias" src="sheet-img/sfskills.jpg" />
                 </td>
                 <td align="center" colspan="2">
                     <img alt="Conhecimentos" src="sheet-img/sfknowledges.jpg" />
@@ -276,7 +276,7 @@
                     </select>
                 </td>
                 <td>
-                    Luta �s Cegas
+                    Luta às Cegas
                 </td>
                 <td>
                     <select id="ddlLutaCega">
@@ -694,7 +694,7 @@
                     <img alt="Antecedentes" src="sheet-img/sfbackgrounds.jpg" />
                 </td>
                 <td colspan="2" align="center">
-                    <img alt="T�cnicas" src="sheet-img/sftechniques.jpg" />
+                    <img alt="Técnicas" src="sheet-img/sftechniques.jpg" />
                 </td>
                 <td colspan="2" align="center" class="leftRed">
                     <img alt="Manobras especiais" src="sheet-img/sfspecialmaneuvers.jpg" />
@@ -1031,7 +1031,7 @@
                     </select>
                 </td>
                 <td>
-                    <img alt="For�a de Vontade" src="sheet-img/sfwillpower.jpg" />:
+                    <img alt="Força de Vontade" src="sheet-img/sfwillpower.jpg" />:
                 </td>
                 <td>
                     <select id="ddlForcaVontade">
@@ -1062,7 +1062,7 @@
                     </select>
                 </td>
                 <td>
-                    <img alt="Sa�de" src="sheet-img/sfhealth.jpg" />:
+                    <img alt="Saúde" src="sheet-img/sfhealth.jpg" />:
                 </td>
                 <td>
                     <select id="ddlSaude">
@@ -1116,6 +1116,96 @@
             <input type="button" id="btnGerarJSON" value="Gerar JSON" />
         </center>
     </div>
-    <center style="margin-top: 20px">V1.0 de 27/08/2016. Originalmente desenvolvido por Matt Meade (<a href="http://www.sfrpg.com" target="_blank">SFRPG.com</a>). Nova vers�o por Luiz Fernando Jr (<a href="http://www.sfrpg.com.br" target="_blank">sfrpg.com.br</a>) com contribui��o de Eric Musashi (<a href="http://www.sfrpg.com/shotokan" target="_blank">Shotokan RPG</a>)</center>
+    <center style="margin-top: 20px">V1.0 de 27/08/2016. Originalmente desenvolvido por Matt Meade (<a href="http://www.sfrpg.com" target="_blank">SFRPG.com</a>). Nova versão por Luiz Fernando Jr (<a href="http://www.sfrpg.com.br" target="_blank">sfrpg.com.br</a>) com contribuição de Eric Musashi (<a href="http://www.sfrpg.com/shotokan" target="_blank">Shotokan RPG</a>)</center>
+    <center style="margin-top: 20px">
+            <script type="text/javascript" language="JavaScript">
+            // Função que monta Mês, Dia, e Ano para exibir no HTML
+            // Declaração de Variaveis que receberam os valores:
+
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var timeValue = "" + ((hours >12) ? hours -12 :hours)
+
+            //Tratamento quantidade de Digitos nos Minutos e exibi se é 
+            // dia ou noite, PM, AM.
+
+            timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+            timeValue += (hours >= 12) ? " PM" : " AM"
+            timerRunning = true;
+            mydate = new Date();
+            myday = mydate.getDay();
+            mymonth = mydate.getMonth();
+            myweekday = mydate.getDate();
+            weekday = myweekday;
+            myyear = mydate.getYear();
+            year = myyear;
+
+            // Tratamento dos Dias da Semana
+
+            if(myday == 0)
+                day = " Domingo, "
+
+            else if(myday == 1)
+                day = " Segunda Feira, "
+
+            else if(myday == 2)
+                day = " Terça Feira, "
+
+            else if(myday == 3)
+                day = " Quarta Feira, "
+
+            else if(myday == 4)
+                day = " Quinta Feira, "
+
+            else if(myday == 5)
+                day = " Sexta Feira, "
+
+            else if(myday == 6)
+                day = " Sábado, "
+
+            //Tratamento dos Meses
+
+            if(mymonth == 0)
+                month = " de Janeiro de "
+
+            else if(mymonth ==1)
+                month = " de Fevereiro de "
+
+            else if(mymonth ==2)
+                month = " de Março de "
+
+            else if(mymonth ==3)
+                month = " de April de "
+
+            else if(mymonth ==4)
+                month = " de Maio de "
+
+            else if(mymonth ==5)
+                month = " de Junho de "
+
+            else if(mymonth ==6)
+                month = " de Julho de "
+
+            else if(mymonth ==7)
+                month = " de Agosto de "
+
+            else if(mymonth ==8)
+                month = " de Setembro de "
+
+            else if(mymonth ==9)
+                month = " de Outubro de "
+
+            else if(mymonth ==10)
+                month = " de Novembro de "
+
+            else if(mymonth ==11)
+                month = " de Dezembro de "
+
+            //Exibe na Pagina o Resultado concatenando(+) os valores
+
+            document.write( day + myweekday + month + year + " - " + timeValue);
+        </script>
+    </center>
 </body>
 </html>
